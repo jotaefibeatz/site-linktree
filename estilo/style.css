@@ -1,0 +1,163 @@
+@charset "UTF-8";
+
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css");
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+
+:root {
+    --bg: #0B0B0F;
+    --primary: #7F00FF; /* roxo neon */
+    --secondary: #00F2FF; /* azul neon */
+    --text: #FFFFFF;
+    --card: #15151D;
+
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+
+body {
+    font-family: "Inter", sans-serif;
+    background-image: linear-gradient(-135deg, var(--bg), var(--card));
+    background-attachment: fixed;
+    color: white;
+}
+
+.container {
+    width: 100%;
+    max-width: 580px;
+    min-width: 300px;
+    margin: auto;
+    line-height: 2em;
+    padding: 0em 3em;
+    margin-top: 2.5em;
+    border-radius: 30px;
+    box-shadow: 
+        0 20px 40px rgba(0, 0, 0, 0.4),
+        0 0 25px rgba(128, 0, 255, 0.014),
+        0 0 60px rgba(0, 242, 255, 0.08);
+    background-color: var(--bg);
+
+}
+
+
+.cima-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    padding: 3em 0px;
+}
+
+.cima-item img {
+    width: 100px;
+    margin-bottom: 20px;
+}
+
+.cima-item  h1 {
+    margin-bottom: 6px;
+}
+
+.cima-item p {
+    font-weight: 200;
+    margin-bottom: 8px;
+    
+}
+
+.redes {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 8px 0px;
+}
+
+.redes i {
+    font-size: 24px;
+    color: white;
+    transition: .2s;
+}
+
+.redes i:hover {
+    color: rgba(255, 255, 255, 0.178);
+}
+
+
+/* CAIXA DE MÍDIA */
+
+.midias {
+    width: 100%;
+}
+
+.midias h2 {
+    padding: 1.2rem;
+    font-size: 20px;
+}
+
+.cont-midias {
+    display: flex;
+    flex-direction: column;
+}
+
+.cont-midias a {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    position: relative;
+    margin-bottom: 10px;
+    padding: 14px;
+    border-radius: 20px;
+    text-decoration: none;
+    color: white;
+
+    transition: .1s ease-in;
+    
+}
+
+.cont-midias a:hover {
+    background-color: rgba(255, 255, 255, 0.068);
+}
+
+.cont-midias a i {
+    padding-left: 20px;
+    position: absolute;
+    left: 0;
+    font-size: 18px;
+}
+
+.cont-midias a span {
+    width: 100%;
+    font-size: 16px;
+}
+
+/* FOOTER */
+
+.foot {
+    padding: 10px;
+    text-align: center;
+}
+
+.foot p {
+    font-size: 16px;
+    color: rgba(255, 255, 255, 0.233);
+}
+
+.foot h3 {
+    font-size: 18px;
+
+}
+
+.foot a {
+    text-decoration: none;
+    color: var(--primary);
+}
+
+.foot a:hover {
+    text-decoration: underline;
+    color: #0044ff91;
+}
