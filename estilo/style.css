@@ -7,8 +7,10 @@
 
 :root {
     --bg: #0B0B0F;
-    --primary: #7F00FF; /* roxo neon */
-    --secondary: #00F2FF; /* azul neon */
+    --primary: #7F00FF;
+    /* roxo neon */
+    --secondary: #00F2FF;
+    /* azul neon */
     --text: #FFFFFF;
     --card: #15151D;
 
@@ -18,7 +20,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    
+
 }
 
 body {
@@ -37,7 +39,7 @@ body {
     padding: 0em 3em;
     margin-top: 2.5em;
     border-radius: 30px;
-    box-shadow: 
+    box-shadow:
         0 20px 40px rgba(0, 0, 0, 0.4),
         0 0 25px rgba(128, 0, 255, 0.014),
         0 0 60px rgba(0, 242, 255, 0.08);
@@ -60,15 +62,33 @@ body {
     margin-bottom: 20px;
 }
 
-.cima-item  h1 {
+.typing {
     margin-bottom: 6px;
+
+    width: 0;
+    white-space: nowrap;
+    overflow: hidden;
+
+    width: 14ch;
+    /* largura fixa baseada no texto */
+    white-space: nowrap;
+    overflow: hidden;
+
+    border-right: 3px solid #fff;
+
+    animation:
+        typing 2s steps(20, end) infinite alternate,
+        blink 0.7s step-end infinite;
+
 }
 
 .cima-item p {
     font-weight: 200;
     margin-bottom: 8px;
-    
+
 }
+
+
 
 .redes {
     display: flex;
@@ -115,12 +135,13 @@ body {
     text-decoration: none;
     color: white;
 
-    transition: .1s ease-in;
-    
+    transition: .2s ease-in;
+
 }
 
 .cont-midias a:hover {
     background-color: rgba(255, 255, 255, 0.068);
+    transform: translateY(-10px);
 }
 
 .cont-midias a i {
@@ -160,4 +181,33 @@ body {
 .foot a:hover {
     text-decoration: underline;
     color: #0044ff91;
+}
+
+
+@media (max-width: 580px) {
+    .container {
+        margin: 0;
+        border-radius: 0;
+    }
+}
+
+
+/* ANIMATIOS */
+
+@keyframes typing {
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 12ch;
+        /* número de caracteres do texto */
+    }
+}
+
+/* Cursor piscando */
+@keyframes blink {
+    50% {
+        border-color: transparent;
+    }
 }
